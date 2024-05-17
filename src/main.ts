@@ -8,6 +8,8 @@ import {defineCustomElements} from '@ionic/pwa-elements/loader'
 if (environment.production) {
   enableProdMode();
 }
+platformBrowserDynamic()
+	.bootstrapModule(AppModule)
+	.catch((err) => console.log(err));
+
 defineCustomElements(window);
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
